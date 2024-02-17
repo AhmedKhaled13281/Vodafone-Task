@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-md bg-body-tertiary sticky-top mb-4">
+  <div class="container-fluid">
+    <div>
+      <img
+        class="navbar__logo--img"
+        src="https://www.freepnglogos.com/uploads/vodafone-png-logo/free-vodafone-logos-20.png"
+        alt="logo"
+      />
+    </div>
+    <button
+      class="navbar-toggler me-4"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarText"
+      aria-controls="navbarText"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav p-3 w-auto d-flex flex-wrap">
+        <li
+          class="navbar__list--item"
+          *ngFor="let user of users; let id = index"
+          [class.active]="activeUsernameIndex === user.id"
+          (click)="setActiveUsername(user.id)"
+        >
+          {{ user.username }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

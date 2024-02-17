@@ -1,0 +1,28 @@
+<section class="post__container">
+  <div class="post__header">
+    <img
+      class="post__header--img"
+      src="{{ userPostObj.profilePicture }}"
+      alt="name"
+    />
+    <h4 class="post__header--name">{{ userPostObj.username }}</h4>
+  </div>
+  <div class="post__content">
+    <p class="post__content--text">
+      {{ post.body | limitChar : 90 }}
+    </p>
+    <img class="post__content--img" src="{{ post.postImage }}" alt="post img" />
+  </div>
+  <div class="post__actions">
+    <button
+      class="btn btn-outline-primary w-100 p-2"
+      (click)="handleShowComment(post.id)"
+      type="button"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      Comments
+    </button>
+    <app-comment-list *ngIf="showComment"></app-comment-list>
+  </div>
+</section>

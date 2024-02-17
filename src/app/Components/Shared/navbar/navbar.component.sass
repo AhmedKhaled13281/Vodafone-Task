@@ -1,0 +1,25 @@
+@import '../../../../Styles/main'
+
+.navbar
+
+  &__logo
+    &--img
+      width: 100px
+
+  &__list
+    &--item
+      padding: 12px
+      font-size: 20px
+      font-weight: 600
+      color: $secondary-color
+      cursor: pointer
+      transition: 0.1s
+      &:hover
+        color: $primary-color
+        border-bottom: 1px solid $primary-color
+        box-shadow: 0px 20px 40px rgba(0,0,0,0.1)
+        transform: scale(1.05,1.05) skewX(10deg)
+      &.active
+        color: $primary-color
+        border-bottom: 1px solid $primary-color
+        box-shadow: 0px 20px 40px rgba(0,0,0,0.1)

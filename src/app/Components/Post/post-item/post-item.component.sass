@@ -1,0 +1,34 @@
+@import '../../../../Styles/main'
+
+.post
+
+  &__container
+    border: 2px solid $third-color
+    border-radius: 10px
+    padding: 20px
+    max-width: 450px
+    margin: auto
+    margin-bottom: 30px
+  &__header
+    display: flex
+    align-items: center
+    margin-bottom: 10px
+    &--img
+      width: 50px
+      height: 50px
+      border-radius: 50%
+      margin-right: 20px
+  &__content
+    @include centerElement
+    flex-direction: column
+    margin-bottom: 10px
+    &--text
+      margin-bottom: 10px
+
+    &--img
+      aspect-ratio: 3/3
+      width: auto
+      border-radius: 10px
+
+  &__actions
+    @include centerElement
